@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between">
+  <h2>Restaurants list</h2>
+</div>
+<ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item d-flex justify-content-between">
+      <strong class="col-4"><%= restaurant.name %></strong>
+      <span class="col-4 text-center"><i class="fa-solid fa-phone"></i><%= restaurant.phone_number %></span>
+      <span class="col-4 text-end"><i class="fa-solid fa-at"></i> <%= restaurant.address %></span>
+    </li>
+  <% end %>
+</ul>
